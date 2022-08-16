@@ -1,0 +1,25 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: todolist
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://34.105.255.229:3306/todolist?useSSL=false&serverTimezone=UTC
+    username: root
+    password: Mengwang85112310@
+  redis:
+    host: 34.105.255.229
+    port: 6379
+    password:
+  jackson:
+    default-property-inclusion: non_null
+  profiles:
+    active: dev
+logging:
+  level:
+    com.meng: debug
+  pattern:
+    dateformat: mm:ss.SSS
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*Mapper.xml
